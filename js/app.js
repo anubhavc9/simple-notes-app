@@ -72,7 +72,7 @@ function showNotes() {
     if (notesObj.length != 0) {
         notesElm.innerHTML = html;
     } else {
-        notesElm.innerHTML = `Nothing to show! Use "Add a Note" section above to add notes.`;
+        notesElm.innerHTML = `<h3 style="color: whitesmoke;">Nothing to show! Use "Add a Note" section above to add notes.</h3>`;
     }
 }
 
@@ -101,7 +101,7 @@ search.addEventListener("input", function(){
     console.log('Input event fired!', inputVal);
     let noteCards = document.getElementsByClassName('noteCard');
     Array.from(noteCards).forEach(function(element){
-        let cardTxt = element.getElementsByTagName("p")[0].innerText;
+        let cardTxt = element.getElementsByTagName("p")[0].innerText.toLowerCase();
         if(cardTxt.includes(inputVal)){
             element.style.display = "block";
         }
