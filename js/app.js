@@ -98,7 +98,7 @@ let search = document.getElementById('searchTxt');
 search.addEventListener("input", function(){
 
     let inputVal = search.value.toLowerCase();
-    console.log('Input event fired!', inputVal);
+    // console.log('Input event fired!', inputVal);
     let noteCards = document.getElementsByClassName('noteCard');
     Array.from(noteCards).forEach(function(element){
         let cardTxt = element.getElementsByTagName("p")[0].innerText.toLowerCase();
@@ -110,8 +110,7 @@ search.addEventListener("input", function(){
         }
         console.log(cardTxt);
     })
-})
-
+});
 
 // function to mark the "imp" field of a note as 1 (which means important)
 function markImp(index){
